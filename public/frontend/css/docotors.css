@@ -1,0 +1,70 @@
+.calc {
+    background-image: url('../image/doctors.png');
+    height: 454px;
+    background-size: 122% 660px;
+    background-repeat: no-repeat;
+    margin-top: -185px;
+    margin-left: -12px;
+    text-align: left;
+    padding-top: 256px;
+    padding-left: 408px;
+    color: #F8A22F;
+
+}
+
+.docotor-card img {
+    width: 352px;
+    height: 349px;
+}
+
+.content-data span {
+    display: block;
+}
+
+.content-data p {
+
+    margin-right: 32px;
+}
+
+.btn-docotor {
+    margin-right: 250px;
+    width: 93px;
+    background: #8DBF47;
+    border: 0;
+    border-radius: 13px;
+    color: #fff;
+    display: block;
+    padding: 2px;
+    padding-right: 32px;
+}
+
+@media(max-width:700px) {
+    .docotor-card {
+        flex-direction: column;
+    }
+
+    .docotor-card img {
+        width: 252px;
+        height: 249px;
+        margin: auto;
+    }
+
+    .calc {
+        background-image: url("../image/doctors.png");
+        height: 454px;
+        background-size: 122% 660px;
+        background-repeat: no-repeat;
+        margin-top: -185px;
+        margin-left: 0px;
+        text-align: left;
+        padding-top: 249px;
+        /* font-size: 5px !important; */
+        padding-left: 81px;
+        color: #F8A22F;
+    }
+
+    .btn-docotor {
+        margin-top: 10px;
+        margin-right: 150px;
+    }
+}

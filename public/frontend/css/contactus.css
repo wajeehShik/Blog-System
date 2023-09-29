@@ -1,0 +1,54 @@
+  .image-contact img {
+        width: 700px;
+        height: 500px
+    }
+
+    .input-data {
+        width: 539px;
+        height: 54px;
+        border: 0;
+        border: 2px solid #8DBF47;
+        box-shadow: -2px -4px 8px #eee;
+        border-radius: 21px;
+    }
+
+    .btn-calc {
+
+        width: 317px;
+        height: 41px;
+        border-radius: 8px;
+        background: #8DBF47;
+        border: 0;
+        margin-top: 20px;
+        color: white;
+    }
+
+    .textarea-data {
+        width: 546px;
+        height: 106px;
+        border-radius: 12px;
+        border: 2px solid #8DBF47;
+        box-shadow: -2px -4px 8px #eee;
+    }
+
+
+    @media(max-width:700px) {
+        .image-contact {
+            order: 1;
+        }
+
+        .image-contact img {
+
+            width: 371px;
+            height: 388px;
+        }
+
+        .form-contact {
+            order: 2;
+        }
+
+        .input-data,
+        .textarea-data {
+            width: 339px;
+        }
+    }

@@ -1,0 +1,50 @@
+<!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'> -->
+
+
+
+
+
+ريكباتشا في تسجيل مستخدم
+التحقق في تسجيل المستخدمي
+
+
+
+
+
+
+
+
+تسجيل مستخدم جديد/
+تواصل معك/
+اشترك في الاشتراكات
+حجز موعد /
+قبل المواعد x
+يوم المواعد x
+تقييم المريض
+تم اضافة مقالات وصفات  x
+تم اضافة اخصائيين تغذية)(اه ولا)
+تم اضافة اشتراك جديد
+
+
+
+
+
+                'url' => 'user/profile/' . $this->user->id,
+                'icon' => 'fa-user',
+                'name' => $this->user->name,
+                'email' => $this->user->email,  غير مطلوب
+                'msg' => 'regiseter new user',
+                'created_at' => $this->user->created_at->diffForHumans(),
+
+
+
+'
+
+
+
+
+تزبيط المساحات بين اراء العملاء  وتصغير صور
+
+
+
+في خطا في صفحة الوجبات 

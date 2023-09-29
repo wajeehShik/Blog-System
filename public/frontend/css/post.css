@@ -1,0 +1,204 @@
+
+    .post h1 {
+
+        color: #8DBF47;
+    }
+
+    .post img {
+        width: 100%;
+        border-radius: 13px;
+        border: 2px solid #e9f3dc;
+
+    }
+
+    .post .author-data {
+        justify-content: space-between;
+        margin-top: 11px;
+    }
+
+    .comment:not(:last-child) {
+        border-bottom: 2px solid #8dbf47;
+        width: 700px;
+    }
+
+    .comment img {
+
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid #8dbf47;
+    }
+
+    .comment p {
+
+        margin-right: 16px;
+        padding-top: 30px;
+    }
+
+
+    textarea {
+        width: 546px;
+        height: 106px;
+        border-radius: 12px !important;
+        border: 2px solid #8DBF47 !important;
+        box-shadow: -2px -4px 8px #eee;
+    }
+
+    .btn-calc {
+
+        width: 242px;
+        height: 41px;
+        border-radius: 8px;
+        background: #8DBF47;
+        border: 0;
+        color: white;
+        margin-right: 220px;
+    }
+
+    .posts-sidebar .artical img {
+        width: 148px !important;
+        height: 78px;
+        border: 2px solid #8DBF47 !important;
+    }
+
+    .content-sidebar {
+        border-right: 2px solid gray;
+    }
+
+    .search {
+        margin-top: 48px;
+        border-radius: 10px;
+        margin-right: 40px;
+        border: 2px solid red;
+        width: 340px;
+    }
+
+    .search .header {
+        background: red;
+        margin-top: -2px;
+        color: white;
+    }
+
+    .search form {
+
+        position: relative;
+    }
+
+    .search input[type="text"] {
+
+        width: 273px;
+        margin-right: 11px;
+        margin-top: 6px;
+        height: 39px;
+        border-radius: 15px;
+        border: 2px solid #8dbf47;
+    }
+
+    .search button {
+        border: 0;
+        background: transparent;
+        color: green;
+        position: relative;
+        left: 40px;
+    }
+
+    .category-search {
+
+        margin-right: 25px;
+        font-size: 20px;
+    }
+
+    .category-check {
+
+        margin-right: 26px;
+        font-size: 17px;
+        padding: 3px;
+    }
+
+
+    .category-check input[type="checkbox"] {
+        width: 40px;
+        height: 20px;
+    }
+
+    .booking {
+
+        width: 340px;
+        border: 2px solid green;
+        padding: 10px;
+        margin-right: 40px;
+        border-radius: 13px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .btn-constlt-calc {
+        width: 153px;
+        height: 41px;
+        border-radius: 13px;
+        background: #8DBF47;
+        border: 0;
+        margin-top: 20px;
+        color: white;
+        margin-right: 57px;
+    }
+
+    .posts-sidebar {
+        width: 340px;
+        border: 4px solid darkseagreen;
+        padding: 12px;
+        margin-right: 42px;
+        border-radius: 13px;
+    }
+
+
+    .posts-sidebar .artical {
+        padding: 7px;
+    }
+
+    .posts-sidebar .artical:not(:last-child) {
+        border-bottom: 2px solid #8dbf47;
+
+    }
+
+    .title-posts {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: block;
+        color: #8DBF47;
+    }
+
+    .artical a {
+        color: #000;
+        margin-right: 13px;
+    }
+
+    @media(max-width:700px) {
+        .sidebar {
+            display: none;
+        }
+
+        .comment:not(:last-child) {
+            width: 373px;
+            padding: 9px;
+        }
+
+        .btn-calc {
+            width: 174px;
+            height: 41px;
+            border-radius: 8px;
+            background: #8DBF47;
+            border: 0;
+            color: white;
+            margin-right: 50px;
+        }
+
+        textarea {
+            width: 346px !important;
+            height: 106px;
+            border-radius: 12px !important;
+            border: 2px solid #8DBF47 !important;
+            box-shadow: -2px -4px 8px #eee;
+            margin-right: -22px;
+        }
+    }

@@ -1,0 +1,61 @@
+
+    .image-login img {
+        width: 700px;
+        height: 500px
+    }
+
+    .input-data {
+        width: 539px;
+        height: 54px;
+        border: 0;
+        border: 2px solid #8DBF47;
+        box-shadow: -2px -4px 8px #eee;
+        border-radius: 21px;
+    }
+
+    .btn-calc {
+
+        width: 157px;
+        height: 41px;
+        border-radius: 8px;
+        background: #8DBF47;
+        border: 0;
+        margin-top: 20px;
+        color: white;
+    }
+
+    .a-calc {
+        width: 167px;
+        background: #8DBF47;
+        padding: 7px;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    .auth-calc {
+        color: #000;
+        margin: 4px;
+        margin-bottom: 20px;
+    }
+
+
+    @media(max-width:700px) {
+        .login-div {
+            order: 2;
+        }
+
+        .image-login {
+            order: 1;
+        }
+
+        .image-login img {
+            width: 300px;
+            height: 300px;
+            margin-right: 10px;
+        }
+
+        .input-data {
+            width: 361px;
+        }
+
+    }

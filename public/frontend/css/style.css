@@ -1,0 +1,82 @@
+/* 
+font-family: 'Libre Baskerville', serif;
+font-family: 'Nova Square', cursive; */
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
+}
+a{
+    text-decoration:none !important;
+}
+.logo{
+    width: 121px;
+    height: 107px;
+}
+.navbar{
+    background:transparent !important;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    color:#000;
+    font-size: 17px !important ; 
+       margin-right: 13px;
+    transition: all 0.3s ease;
+}
+.nav-link:hover {
+    font-weight: bold;
+    border-bottom: 1px solid #8DBF47;
+}
+.user-bar{
+    
+    gap: 13px;
+    margin-right: 57px;
+}
+.register{
+    background: #8DBF47;
+    height: 39px;
+    padding-top: 7px;
+    width: 108px;
+    border-radius: 8px;
+    color: white;
+    padding-right: 7px;
+    }
+    .register:hover{
+        color:white;
+    }
+.login,.notification{
+    color:#8DBF47;
+    padding-top: 7px;}
+    .login:hover{
+        background: #8DBF47;
+        height: 39px;
+        padding-top: 7px;
+        width: 100px;
+        border-radius: 8px;
+        color: white;
+        padding-right: 7px;}
+footer{
+    background-image: url("../image/footer.png");
+    width: 101%;
+}
+.infora .url-links{
+    margin-right: 126px !important;
+}
+
+.infora .url-links li a{color:#374B5C}
+
+@media(max-width:700px){
+    .navbar-collapse{
+        height: 660px !important;
+    }
+
+    footer{
+        width: 100% !important;
+        background-repeat: no-repeat !important;
+        background-size: 1600px 760px !important;
+    }
+    .logo-data{
+        display: flex;
+        
+    justify-content: space-around;
+    }
+}

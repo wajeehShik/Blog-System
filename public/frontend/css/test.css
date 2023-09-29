@@ -1,0 +1,152 @@
+body{
+    direction:rtl;
+    overflow-x: hidden;
+}
+a{
+    color:black !important;
+    text-decoration:none !important;
+}
+.water-calc nav,
+.crbohidrate-page nav,
+.calories-burned nav,
+.body-fat nav,
+.wasfas nav,
+.wasfa nav
+{
+    background:transparent !important;
+}   
+.title-page{
+    color:white;
+}
+.water-calc{
+    background-image:url('../image/Group 16402.png') !important;
+   height: 65vh;
+    background-repeat:no-repeat;
+   /*  background-position:center;*/
+   
+   background-size:102% 85vh !important;
+}
+.body-fat{
+    background-image:url('../image/body_fat.png') !important;
+   height: 65vh;
+    background-repeat:no-repeat;
+   /*  background-position:center;*/
+   
+   background-size:102% 85vh !important;
+
+}
+.wasfas{
+    background-image:url('../image/wasfas.png') !important;
+   height: 95vh;
+   margin-top: -18px !important;
+    background-repeat:no-repeat;
+   /*  background-position:center;*/
+   
+   background-size:104% 90vh !important;
+
+
+}
+.crbohidrate-page{
+    background-image:url('../image/Group 16402.png');
+   height: 95vh;
+    background-repeat:no-repeat;
+   /*  background-position:center;*/
+   
+   background-size:102% 95vh !important;
+
+}
+
+.calories-burned{
+    background-image:url('../image/calorie-burned-walking.png') !important;
+   height: 70vh;
+    background-repeat:no-repeat;
+   /*  background-position:center;*/
+   
+   background-size:102% 85vh !important;
+
+}
+
+.predcamp{
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+    background: #8DBF47;
+    margin-right: 44px;
+    height: 45px;
+    text-align: center;
+    justify-content: unset;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+}
+.predcamp-width{
+    
+width:370px;
+}
+.predcamp-normal-width{
+    width: 220px;
+}
+.predcamp-color{
+    color:white !important;
+    font-size: 20px;
+}
+
+.content-form{
+    text-align: center;
+    margin-top: -61px;
+    background: transparent;
+}
+.content-form form{
+    margin:auto ;
+}
+.content-form .row{
+    margin-right: 20%;
+    border: 2px solid #8DBF47;
+    width: 920px;
+    margin-top: 22px;
+    padding: 13px;
+    border-radius: 68px;    box-shadow: 1px 0px 8px #cbe2ac;
+}
+    
+.content-form  .input-calc{
+    
+    width: 416px;
+    background: #E6F1D8;
+    border-radius: 16px;
+    border: none;   
+    height: 41px;
+    padding-right: 14px;  outline: none;
+}
+
+
+.content-form .btn-calc{
+    width: 377px;
+    height: 41px;
+    border-radius: 8px;
+    background: #8DBF47;
+    border: 0;
+    color:white;
+}
+
+.btn-inline-calc{
+    width: 200px;
+    height: 41px;
+    border-radius: 8px;
+    background: #8DBF47;
+    border: 0;
+    color:white;
+
+}
+.content-form  .input-inline-calc,
+.content-form  select{
+    
+    width: 156px;
+    background: #E6F1D8;
+    border-radius: 16px;
+    border: none;   
+    height: 41px;
+    padding-right: 14px;  outline: none;
+}
+.mr-5{
+    margin-right: 50px;
+}

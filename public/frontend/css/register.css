@@ -1,0 +1,132 @@
+
+    #foodnote,
+    #illnote {
+        display: none;
+    }
+
+    .form-step {
+        display: none;
+        transform-origin: top;
+        animation: animate .5s;
+        transition: animate .3s;
+    }
+
+    .from-step-active {
+        display: block;
+    }
+
+    @keyframes animate {
+        from {
+            transform: scale(1, 0);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1, 1);
+            opacity: 1;
+        }
+    }
+
+    .input-calc-full {
+        width: 406px;
+        background: #E6F1D8;
+        border-radius: 16px;
+        border: none;
+        height: 41px;
+        padding-right: 14px;
+        outline: none;
+
+    }
+
+    .input-calc {
+
+        width: 206px;
+        background: #E6F1D8;
+        border-radius: 16px;
+        border: none;
+        height: 41px;
+        padding-right: 14px;
+        outline: none;
+    }
+
+
+
+    .input-calc2 {
+        width: 255px;
+        background: #E6F1D8;
+        border-radius: 16px;
+        border: none;
+        height: 41px;
+        padding-right: 14px;
+        outline: none;
+    }
+
+    .textarea2 {
+        width: 533px;
+        background: #E6F1D8;
+        border-radius: 16px;
+        border: none;
+        height: 73px;
+        padding-right: 14px;
+        outline: none;
+    }
+
+    .police {
+        justify-content: space-around;
+        margin-top: 5px;
+
+    }
+
+    .police input {
+        width: 30px;
+        height: 60px
+    }
+
+    .police span {
+        margin-top: 17px;
+        font-size: 20px;
+    }
+
+    .btn-calc {
+
+        width: 277px;
+        height: 41px;
+        border-radius: 8px;
+        background: #8DBF47;
+        border: 0;
+        color: white;
+    }
+
+    .btn-calc:hover,
+    .btn-calc:focus {
+        border: 2px solid #8DBF47 !important;
+        color: #8DBF47;
+
+    }
+
+    @media(max-width:700px) {
+        .input-calc-full {
+            width: 305px;
+        }
+
+        .content-register {
+            order: 2;
+        }
+
+        .image-register {
+            order: 1;
+        }
+
+        .input-calc {
+            width: 295px;
+        }
+
+        form {
+            margin-right: 49px;
+        }
+
+        .textarea2 {
+
+            width: 289px;
+        }
+    }

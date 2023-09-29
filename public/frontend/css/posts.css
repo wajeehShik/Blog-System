@@ -1,0 +1,60 @@
+
+    .calc {
+        background-image: url('../image/doctors.png');
+        height: 454px;
+        background-size: 122% 660px;
+        background-repeat: no-repeat;
+        margin-top: -185px;
+        margin-left: -12px;
+        text-align: left;
+        padding-top: 256px;
+        padding-left: 588px;
+        color: #F8A22F;
+
+    }
+
+    .img-post {
+        margin-right: 63px;
+        width: 350px;
+        height: 253px;
+        margin-bottom: 6px;
+    }
+
+    .content-data h4 {
+        color: #8DBF47
+    }
+
+    .content-data p {
+
+        margin-right: 32px;
+    }
+
+    .title-posts {
+
+        display: block;
+        color: #8DBF47;
+    }
+
+    @media(max-width:700px) {
+
+        .post-data {
+            margin-bottom: 25px;
+        }
+
+        .img-post {
+            margin-right: 23px;
+        }
+
+        .calc {
+            background-image: url("../image/doctors.png");
+            height: 454px;
+            background-size: 122% 660px;
+            background-repeat: no-repeat;
+            margin-top: -185px;
+            margin-left: 0px;
+            text-align: left;
+            padding-top: 249px;
+            padding-left: 81px;
+            color: #F8A22F;
+        }
+    }
