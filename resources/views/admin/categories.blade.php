@@ -3,6 +3,12 @@
 <h1><i class="fa fa-th-list"></i> اقسام</h1>
 @endsection
 @section('content')
+<style>
+.custom-thead{
+    background-color: #233490;
+    color:white;
+}
+</style>
 <!-- row -->
 <div class="row">
     <div class="col-xl-12">
@@ -14,8 +20,8 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive" id="ajax_responce_serarchDiv">
-                    <table id="example1" class="table key-buttons text-md-nowrap" data-page-length='50' style="text-align: center">
-                        <thead>
+                    <table id="example1" class="table table-bordered table-hover key-buttons text-md-nowrap" data-page-length='50' style="text-align: center">
+                        <thead class="custom-thead">
                             <tr>
                                 <th class="border-bottom-0">#</th>
                                 <th class="border-bottom-0">اسم </th>

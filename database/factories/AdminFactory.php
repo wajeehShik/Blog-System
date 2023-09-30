@@ -22,7 +22,8 @@ class AdminFactory extends Factory
             'password' => bcrypt('123123123'),
             'role' => ["admin"],
             'status' => (string)rand(0,1),
-            'mobile' => '0597880'.rand(0,9).rand(0,9).rand(0,9),
+            'mobile'=> '059'.rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9),
+
             'online' =>  (string)rand(0,1),
         ];
     }

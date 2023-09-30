@@ -41,7 +41,7 @@ class AuthenticatedSessionController extends Controller
         if (auth()->guard('admin')->check()) {
             $redirect = RouteServiceProvider::AdminLogin;
         }
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended($redirect);
     }
 
     /**

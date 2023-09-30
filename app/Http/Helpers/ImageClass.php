@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers;
+namespace App\Http\Helpers;
 
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\File;

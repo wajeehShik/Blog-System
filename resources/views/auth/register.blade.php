@@ -1,59 +1,58 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<x-front-layout>
+    <section class="my_account_area pt--80 pb--55 bg--white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-md-3">
+                    <div class="my__account__wrapper">
+                        <h3 class="account__title">Register</h3>
+<form method="post" action="{{route('register')}}" enctype="multipart/form-data" style="width:800px">
+    @csrf
+                        <div class="account__form">
+                            <div class="input__box">
+                                <label for="name">Name *</label>
+                                <input type="text" name="name" value="{{old('name')}}" placeholder="Enter name">
+                                @error('name')<span class="text-danger">{{ $message }}</span>@enderror
+                            </div>
+                            <div class="input__box">
+                                <label for="username">Username *</label>
+                                <input type="text" name="username" value="{{old('username')}}" placeholder="Enter username">
+                                @error('username')<span class="text-danger">{{ $message }}</span>@enderror
+                            </div>
+                            <div class="input__box">
+                                <label for="email">Email *</label>
+                                <input type="email" name="email" value="{{old('email')}}" placeholder="Enter email">
+                                @error('email')<span class="text-danger">{{ $message }}</span>@enderror
+                            </div>
+                            <div class="input__box">
+                                <label for="mobile">Mobile *</label>
+                                <input type="text" name="mobile" value="{{old('mobile')}}" placeholder="Enter mobile" min="10" max="10">
+                                @error('mobile')<span class="text-danger">{{ $message }}</span>@enderror
+                            </div>
+                            <div class="input__box">
+                                <label for="password">Password *</label>
+                                <input type="password" name="password" id="password" placeholder="Enter password">
+                                @error('password')<span class="text-danger">{{ $message }}</span>@enderror
+                            </div>
+                            <div class="input__box">
+                                <label for="password_confirmation">Re-Password *</label>
+                                <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Enter Re-Password">
+                                @error('password_confirmation')<span class="text-danger">{{ $message }}</span>@enderror
+                            </div>
+                            <div class="input__box">
+                                <label for="image">image *</label>
+                                <input type="file" name="image" id="image">
+                                @error('image')<span class="text-danger">{{ $message }}</span>@enderror
+                            </div>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
-
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                            <div class="form__btn">
+                                <button>Create account</button>
+                            </div>
+                            <a class="forget_pass" href="{{ route('login') }}">Login?</a>
+                        </div>
+</form>
+                    </div>
+                </div>
             </div>
-
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+        </div>
+    </section>
+</x-front-layout>

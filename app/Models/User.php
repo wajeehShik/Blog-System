@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable  implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -22,6 +22,11 @@ class User extends Authenticatable
         'email',
         'status',
         'password',
+        'username',
+        'online',
+        'mobile',
+        'status',
+        'image',
     ];
 
     /**
