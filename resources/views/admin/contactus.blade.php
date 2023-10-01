@@ -33,7 +33,7 @@
                                 <th class="border-bottom-0">#</th>
                                 <th class="border-bottom-0">اسم </th>
                                 <th class="border-bottom-0">ايميل </th>
-                                <th class="border-bottom-0">رقم الجوال</th>
+                                <th class="border-bottom-0">عنوان </th>
                                 <th class="border-bottom-0">العمليات</th>
                             </tr>
                         </thead>
@@ -43,7 +43,7 @@
                                 <td>{{$loop->iteration }}</td>
                                 <td>{{ $contact->name }}</td>
                                 <td>{{ $contact->email }}</td>
-                                <td>{{ $contact->phone }}</td>
+                                <td>{{ $contact->subject }}</td>
                                 <td>
                                     @can("طلبات التواصل-عرض")
                                     <a class="modal-effect btn btn-sm btn-info" data-id="{{ $contact->id }}" data-toggle="modal" id="showModelContactus" href="javascript:void(0)" title="عرض"><i class="fa fa-eye"></i></a>

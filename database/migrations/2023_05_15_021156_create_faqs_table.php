@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text("body");
-            $table->enum('status', ['active', 'no_active'])->default('active');
+            $table->enum('status', ['0', '1'])->default('1');
             $table->foreignId('admin_id')->nullable()->constrained('admins')->nullOnDelete();
             $table->timestamps();
         });
