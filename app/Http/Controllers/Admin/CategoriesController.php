@@ -3,12 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 
-use App\Helpers\HerkuoUploader;
-use App\Helpers\ImageClass;
 use App\Http\Controllers\Controller;
 use App\Http\Helpers\UploadImage;
 use App\Http\Requests\Admin\CategoryRequest;
-use App\Models\Artical;
 use App\Models\Category;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request;
@@ -36,12 +33,9 @@ class CategoriesController extends Controller
      */
     public function store(CategoryRequest $request)
     {
-
-        $filename = '';
-        $image = UploadImage::create($request->image, 'categories');
-        $category = Category::create([
+        $image = UploadImage::create($request->image, 'assets/categories');
+         Category::create([
             'name' => $request->post('name'),
-            'slug' => $request->post('name'),
             'admin_id' => auth()->id(),
             'status' => $request->post('status'),
             'parent_id' => $request->post('parent_id'),
@@ -78,7 +72,7 @@ class CategoriesController extends Controller
         $data['name'] = $request->post('name');
         $data['status'] = $request->post('status');
         if (isset($request->image)) {
-            $data['image'] =  UploadImage::update($request->image, $cat->image, 'categories');
+ $data['image'] =  UploadImage::update($request->image, 'assets/categories/'.$cat->image, 'assets/categories');
         }
         $cat->update($data);
         alert()->success('تصنيفات', 'تم اضافة تصنيف بنجاح');
@@ -105,7 +99,7 @@ class CategoriesController extends Controller
         // }
         $cat->delete();
         $image = $cat->image;
-        UploadImage::delete($image, 'categories');
+        UploadImage::delete($image, 'assets/categories');
         alert()->warning('تصنيف', 'تم حذف القسم بنجاح');
         return redirect()->route('admin.categories.index');
     }

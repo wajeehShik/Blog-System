@@ -3,16 +3,19 @@
 namespace Database\Factories;
 
 use App\Models\Admin;
-use App\Models\Faq;
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 use Faker\Factory as FactoryHelper;
 
+use App\Models\Tag;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Faq>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Tag>
  */
-class FaqFactory extends Factory
+class TagFactory extends Factory
 {
-    protected $model = Faq::class;
+    protected $model = Tag::class;
+
     /**
      * Define the model's default state.
      *
@@ -22,13 +25,12 @@ class FaqFactory extends Factory
     {
         $faker = FactoryHelper::create();
         $admin = collect(Admin::get()->modelKeys());
+        $name=  $faker->sentence(mt_rand(1, 3), true);
         return [
-            'title'=>$this->faker->title(),
-            'body'=> $faker->sentence(mt_rand(30, 100), true),
+            'name'=>$name,
+            'slug'=>Str::slug($name),
+            'admin_id'=>$admin->random(),
             'status'=>(string)rand(0,1),
-            'admin_id'=>$admin->random()
-
-            //
         ];
     }
 }

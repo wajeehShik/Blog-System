@@ -59,7 +59,7 @@ return [
      *    'method' => array('Str','slug'),
      */
 
-    'method' => [App\Helpers\MySlugHelper::class,'slug'],
+    'method' => [App\Http\Helpers\MySlugHelper::class,'slug'],
 
     /**
      * Separator to use when generating slugs.  Defaults to a hyphen.

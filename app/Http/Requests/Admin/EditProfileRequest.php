@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class EditProfileRequest extends FormRequest
 {
+    protected $stopOnFirstFailure = true;
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -30,7 +31,6 @@ class EditProfileRequest extends FormRequest
         ];
     }
 
-    protected $stopOnFirstFailure = true;
 
 
     public function messages()

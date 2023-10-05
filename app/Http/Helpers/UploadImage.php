@@ -11,7 +11,7 @@ class UploadImage
     public static function create($file, $foldername = '')
     {
         $filename = time() . '-' . time() . '.' . $file->getClientOriginalName();
-        $path = public_path('assets/' . $foldername . '/' . $filename);
+        $path = public_path( $foldername . '/' . $filename);
 
         Image::make($file->getRealPath())->resize(538, 200)->save($path, 100);
         return  $filename;
@@ -19,13 +19,13 @@ class UploadImage
     public static function update($file, $oldname, $foldername)
     {
         if ($oldname && $oldname != 'default.png') {
-            if (File::exists('assets/' . $foldername . '/' . $oldname)) {
-                unlink('assets/' . $foldername . '/' . $oldname);
+            if (File::exists($oldname)) {
+                unlink($oldname);
             }
         }
 
         $filename = time() . '-' . time() . '.' . $file->getClientOriginalExtension();
-        $path = public_path('assets/' . $foldername . '/' . $filename);
+        $path = public_path($foldername. $filename);
         Image::make($file->getRealPath())->resize(800, null, function ($constraint) {
             $constraint->aspectRatio();
         })->save($path, 100);
@@ -33,13 +33,11 @@ class UploadImage
         return $filename;
     }
 
-    public static function delete($image, $folder)
+    public static function delete($image, $path)
     {
         if ($image) {
-
-            if (File::exists('assets/' . $folder . '/' . $image)) {
-
-                unlink('assets/' . $folder . '/' . $image);
+            if (File::exists($path . $image)) {
+                unlink($path . $image);
             }
         }
     }

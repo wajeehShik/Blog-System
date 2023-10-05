@@ -5,7 +5,7 @@ namespace App\Http\Helpers;
 class EditorArabic
 {
 
-    public static function editorContent($content)
+    public static function editorContent($content,$path_upload)
     {
 
         $dom = new \DomDocument();
@@ -20,7 +20,7 @@ class EditorArabic
                 list($type, $data) = array_pad(explode(';', $data), 2, null);
                 list(, $data) = array_pad(explode(',', $data), 2, null);
                 $dataConvert = base64_decode($data);
-                $image_name = "/upload/wasfas/" . time() . $item . '.png';
+                $image_name = $path_upload . time() . $item . '.png';
                 $path = public_path() . $image_name;
 
                 file_put_contents($path, $dataConvert);

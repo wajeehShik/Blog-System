@@ -58,7 +58,7 @@
             <li><a class="app-menu__item active" href="{{route('admin.dashboard')}}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">لوحة التحكم</span></a></li>
             <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">مقالات</span><i class="treeview-indicator fa fa-angle-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a class="treeview-item" href="{{--route('admin.posts.index')--}}"><i class=" icon fa fa-circle-o"></i>مقالات</a></li>
+                    <li><a class="treeview-item" href="{{route('admin.posts.index')}}"><i class=" icon fa fa-circle-o"></i>مقالات</a></li>
                     <li><a class="treeview-item" href="{{route('admin.categories.index')}}"><i class="icon fa fa-circle-o"></i> اقسام</a></li>
                     <li><a class="treeview-item" href="{{route('admin.tags.index')}}"><i class="icon fa fa-circle-o"></i> وسوم</a></li>
                     <li><a class="treeview-item" href="{{route('admin.faqs.index')}}"><i class="icon fa fa-circle-o"></i> الاسئلة الشائعه</a></li>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\ContactusController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\SupervisorsController;
@@ -14,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['auth:admin'], 'prefix' => 'admin/', 'as' => 'admin.'], function () {
     Route::get('/dashboard', [DashboradController::class, 'index'])->name('dashboard');
-
-
     //بيانات الشخصية
     Route::group([
         'prefix' => '/profile',
@@ -75,6 +74,17 @@ Route::group(['middleware' => ['auth:admin'], 'prefix' => 'admin/', 'as' => 'adm
         Route::post('edit/{id}', [CategoriesController::class, 'edit'])->name('edit');
         Route::post('/update', [CategoriesController::class, 'update'])->name('update');
         Route::post('/delete', [CategoriesController::class, 'delete'])->name('delete');
+    });
+      //posts
+      Route::group([
+        'prefix' => '/posts',
+        'as' => 'posts.'
+    ],  function () {
+        Route::get('/', [PostsController::class, 'index'])->name('index');
+        Route::post('/store', [PostsController::class, 'store'])->name('store');
+        Route::post('edit/{id}', [PostsController::class, 'edit'])->name('edit');
+        Route::post('/update', [PostsController::class, 'update'])->name('update');
+        Route::post('/delete', [PostsController::class, 'delete'])->name('delete');
     });
     //tags
     Route::group([

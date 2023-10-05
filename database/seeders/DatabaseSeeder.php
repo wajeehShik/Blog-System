@@ -14,15 +14,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         \App\Models\Admin::factory(50)->create();
-        \App\Models\user::factory(300)->create();
-        \App\Models\Category::factory(100)->create();
-        \App\Models\Faq::factory(10)->create();
+        //  \App\Models\Admin::factory(50)->create();
+        // \App\Models\user::factory(300)->create();
+        // \App\Models\Tag::factory(500)->create();
+        // \App\Models\Faq::factory(10)->create();
         $this->call([
 
             PermissionTableSeeder::class,
             CreateUsersSeeder::class,
-            PostsTableSeeder::class,
+            // PostsTableSeeder::class,
+            // PostTagSeeder::class,
         ]);
+        \App\Models\Category::factory(1000)->create();
+        \App\Models\Tag::factory(500)->create();
     }
 }

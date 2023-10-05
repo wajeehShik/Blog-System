@@ -20,6 +20,7 @@ return new class extends Migration
             $table->longText('description')->index(); //وصف مختصر عشان ينعرض في عرض منتج
             $table->longText('content')->index(); //وصف كامل
             $table->unsignedTinyInteger('status')->default(0);
+            $table->string("image");
             $table->unsignedTinyInteger('comment_able')->default(1);
             $table->foreignId('admin_id')->constrained()->onDelete('cascade');
             $table->foreignId('category_id')->constrained()->onDelete('cascade');

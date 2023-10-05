@@ -24,7 +24,7 @@ class CategoryFactory extends Factory
     {
         $faker = FactoryHelper::create();
            $admin = collect(Admin::get()->modelKeys());
-           $name=  $faker->sentence(mt_rand(3, 6), true);
+           $name=  $faker->sentence(mt_rand(1, 3), true);
 
         return [
             

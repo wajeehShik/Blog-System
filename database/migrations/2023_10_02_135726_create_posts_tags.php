@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tags', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('slug')->unique();
-            $table->foreignId('admin_id')->nullable()->constrained('admins', 'id');
-            $table->enum('status', ['0', '1'])->default('1');
+        Schema::create('posts_tags', function (Blueprint $table) {
+            $table->foreignId('post_id')->constrained('posts', 'id');
+            $table->foreignId('tag_id')->constrained('tags', 'id');
+            $table->primary(['post_id',
+            'tag_id'],'posts_tags_primary');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tags');
+        Schema::dropIfExists('table_articals_tags');
     }
 };

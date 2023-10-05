@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('slug')->nullable();
+            $table->string("slug")->unique();
             $table->string('image');
-            $table->enum('status', ['active', 'no_active'])->default('active');
+            $table->enum('status', ['1', '0'])->default('1');
             $table->foreignId('parent_id')->nullable()->constrained('categories', 'id')->nullOnDelete();
             $table->foreignId('admin_id')->nullable()->constrained('admins', 'id')->nullOnDelete();
             $table->timestamps();

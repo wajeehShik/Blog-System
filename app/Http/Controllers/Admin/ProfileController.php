@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Validator;
-use App\Helpers\ImageClass;
+use App\Http\Helpers\ImageClass;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\EditProfileRequest;
 use App\Models\Admin;

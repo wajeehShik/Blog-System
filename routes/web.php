@@ -16,6 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("/test",function(){
+    $tags = collect(\App\Models\Tag::get()->modelKeys());
+    $tag=$tags->random();
+    print_r($tags);
+    echo "that delete is ".$tag;
+unset($tags[$tag]);
+dd($tags);
+    
+
+
+});
 Route::get('/', [IndexController::class,'index'])->name('home');
 
 

@@ -1,5 +1,5 @@
 <?php
-namespace App\Helpers;
+namespace App\Http\Helpers;
 class MySlugHelper
 {
     public static function slug($string, $separator = '-') {
